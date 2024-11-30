@@ -1,3 +1,3 @@
 export default async function Home() {
-  return <div className=""></div>;
+  return <div className="flex justify-center items-center h-screen">    <h1 className="text-3xl font-bold underline">Katy Cakes</h1></div>;
 }
