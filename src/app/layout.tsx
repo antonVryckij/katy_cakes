@@ -1,4 +1,6 @@
+import AppFooter from '@components/app-footer';
 import AppHeader from '@components/app-header';
+import PrelineScript from '@src/components/PrelineScript';
 import type { Metadata } from 'next';
 import { ReactNode } from 'react';
 import './globals.css';
@@ -14,11 +16,13 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className="dark">
+      <body className="dark:bg-neutral-800">
         <AppHeader />
         {children}
+        <AppFooter />
       </body>
+      <PrelineScript />
     </html>
   );
 }
