@@ -13,15 +13,15 @@ const ThemeSwitcher = () => {
 
   const getIconBasedOnTheme = (theme?: string) => {
     return theme && theme === 'light' ? (
-      <Moon width={18} height={18} />
+      <Moon width={24} height={24} strokeWidth={1} />
     ) : (
-      <Sun width={18} height={18} />
+      <Sun width={24} height={24} strokeWidth={1} />
     );
   };
 
   return (
     <button
-      className="flex h-[32px] w-[32px] items-center justify-center rounded-full border bg-gray-50 hover:bg-gray-100 dark:bg-neutral-700 dark:hover:bg-neutral-600"
+      className="flex h-[38px] w-[38px] items-center justify-center rounded-full border hover:bg-gray-100 dark:border-neutral-700 dark:hover:bg-neutral-700"
       onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
     >
       {mounted ? getIconBasedOnTheme(theme) : null}
