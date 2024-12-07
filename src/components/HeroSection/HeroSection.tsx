@@ -4,10 +4,10 @@ import Link from 'next/link';
 
 const HeroSection = () => {
   return (
-    <div className="mx-auto flex h-[calc(100vh-100px)] max-w-[85rem] px-4 sm:px-6 lg:px-8">
-      <div className="grid gap-4 md:grid-cols-2 md:items-center md:gap-8 xl:gap-20">
+    <div className="mx-auto flex h-[calc(100vh-100px)] max-w-[85rem] px-4 font-normal sm:px-6 lg:px-8">
+      <div className="grid gap-4 md:grid-cols-2 md:items-center md:gap-6 xl:gap-10">
         <div>
-          <h1 className="text-primary block text-3xl font-bold dark:text-white sm:text-4xl lg:text-[3.5rem] lg:leading-tight">
+          <h1 className="block text-4xl font-extrabold text-primary sm:text-4xl lg:text-[3.5rem] lg:leading-tight dark:text-white">
             Ми не просто готуємо, ми створюємо ваші емоції!
             {/*We do not cook, we create your emotions!*/}
           </h1>
@@ -18,7 +18,7 @@ const HeroSection = () => {
 
           <div className="mt-7 grid w-full gap-3 sm:inline-flex">
             <Link
-              className="bg-secondary text-primary hover:bg-secondary inline-flex items-center justify-center gap-x-2 rounded-lg border border-transparent px-4 py-3 text-sm font-medium hover:cursor-pointer hover:opacity-75 disabled:pointer-events-none disabled:opacity-50"
+              className="inline-flex items-center justify-center gap-x-2 rounded-lg border border-transparent bg-secondary px-4 py-3 text-sm font-medium text-primary hover:cursor-pointer hover:bg-secondary hover:opacity-75 disabled:pointer-events-none disabled:opacity-50"
               href="#"
             >
               Переглянути меню

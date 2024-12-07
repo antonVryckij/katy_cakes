@@ -1,5 +1,6 @@
 import prelineConfig from 'preline/plugin';
 import type { Config } from 'tailwindcss';
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 export default {
   darkMode: 'selector',
@@ -11,6 +12,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-nunito)', ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         primary: 'var(--primary-color)',
         secondary: 'var(--secondary-color)',
