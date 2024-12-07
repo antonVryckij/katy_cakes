@@ -1,8 +1,9 @@
-import AppFooter from '@components/app-footer';
-import AppHeader from '@components/app-header';
 import PrelineScript from '@src/components/PrelineScript';
+import ThemeProvider from '@src/providers/ThemeProvider';
 import type { Metadata } from 'next';
 import { ReactNode } from 'react';
+import AppFooter from '../components/AppFooter';
+import AppHeader from '../components/AppHeader';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -16,11 +17,13 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning>
       <body className="dark:bg-neutral-800">
-        <AppHeader />
-        {children}
-        <AppFooter />
+        <ThemeProvider>
+          <AppHeader />
+          {children}
+          <AppFooter />
+        </ThemeProvider>
       </body>
       <PrelineScript />
     </html>
