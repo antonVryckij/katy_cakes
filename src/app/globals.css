@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --primary-color: #231e41;
+    --secondary-color: #f5c332;
+    --text-color: #6f6f87;
+}
+
+@layer components {
+    .nav-link  {
+        @apply text-primary-text text-sm hover:bg-gray-100 rounded-lg p-2 dark:text-neutral-200 dark:hover:bg-neutral-700 focus:bg-neutral-100 dark:focus:bg-neutral-700
+    }
+}
